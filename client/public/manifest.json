@@ -1,0 +1,69 @@
+{
+  "name": "Forex Quick Toolkit",
+  "short_name": "FX Toolkit",
+  "description": "Lightweight, offline-capable forex trading utilities - currency converter, trade calculator, signals, journal, and market sessions",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0e27",
+  "theme_color": "#4a9eff",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%230a0e27' width='192' height='192'/><text x='96' y='120' font-size='80' font-weight='bold' text-anchor='middle' fill='%234a9eff' font-family='monospace'>FX</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%230a0e27' width='540' height='720'/><text x='270' y='360' font-size='60' font-weight='bold' text-anchor='middle' fill='%234a9eff' font-family='monospace'>FX TOOLKIT</text></svg>",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ],
+  "categories": ["finance", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Currency Converter",
+      "short_name": "Converter",
+      "description": "Convert currencies with live rates",
+      "url": "/?module=converter",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect fill='%234a9eff' width='96' height='96'/><text x='48' y='60' font-size='40' font-weight='bold' text-anchor='middle' fill='%230a0e27' font-family='monospace'>$</text></svg>",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Trade Calculator",
+      "short_name": "Calculator",
+      "description": "Calculate lot sizes and risk",
+      "url": "/?module=calculator",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect fill='%234a9eff' width='96' height='96'/><text x='48' y='60' font-size='40' font-weight='bold' text-anchor='middle' fill='%230a0e27' font-family='monospace'>∑</text></svg>",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Trade Journal",
+      "short_name": "Journal",
+      "description": "Log and track your trades",
+      "url": "/?module=journal",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect fill='%234a9eff' width='96' height='96'/><text x='48' y='60' font-size='40' font-weight='bold' text-anchor='middle' fill='%230a0e27' font-family='monospace'>📝</text></svg>",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ]
+}

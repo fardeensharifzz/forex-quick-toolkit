@@ -3,6 +3,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -40,86 +43,108 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-success: #00d084;
+  --color-danger: #ff4757;
+  --color-warning: #ffa500;
+  --color-info: #4a9eff;
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  /* Trading Terminal Color Palette */
+  --color-bg-primary: #0a0e27;
+  --color-bg-secondary: #141829;
+  --color-accent-primary: #4a9eff;
+  --color-accent-success: #00d084;
+  --color-accent-warning: #ffa500;
+  --color-accent-danger: #ff4757;
+  --color-text-primary: #e8eef5;
+  --color-text-secondary: #8892a6;
+  --color-border: #1e2749;
+  
+  /* Typography */
+  --font-mono-display: 'Roboto Mono', monospace;
+  --font-mono-data: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+  
+  /* Spacing & Sizing */
+  --spacing-unit: 8px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
+  /* Tailwind Overrides for Dark Theme */
+  --primary: #4a9eff;
+  --primary-foreground: #0a0e27;
+  --sidebar-primary: #4a9eff;
+  --sidebar-primary-foreground: #0a0e27;
+  --chart-1: #4a9eff;
+  --chart-2: #00d084;
+  --chart-3: #ffa500;
+  --chart-4: #ff4757;
+  --chart-5: #8892a6;
+  --radius: 0.5rem;
+  --background: #0a0e27;
+  --foreground: #e8eef5;
+  --card: #141829;
+  --card-foreground: #e8eef5;
+  --popover: #141829;
+  --popover-foreground: #e8eef5;
+  --secondary: #1e2749;
+  --secondary-foreground: #8892a6;
+  --muted: #1e2749;
+  --muted-foreground: #8892a6;
+  --accent: #4a9eff;
+  --accent-foreground: #0a0e27;
+  --destructive: #ff4757;
+  --destructive-foreground: #0a0e27;
+  --border: #1e2749;
+  --input: #141829;
+  --ring: #4a9eff;
+  --sidebar: #141829;
+  --sidebar-foreground: #e8eef5;
+  --sidebar-accent: #4a9eff;
+  --sidebar-accent-foreground: #0a0e27;
+  --sidebar-border: #1e2749;
+  --sidebar-ring: #4a9eff;
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  /* Dark theme already applied via :root */
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  
+  html {
+    font-family: var(--font-sans);
+  }
+  
   body {
     @apply bg-background text-foreground;
+    background-image: 
+      linear-gradient(90deg, rgba(74, 158, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(rgba(74, 158, 255, 0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-mono-display);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  code, pre {
+    font-family: var(--font-mono-data);
+  }
+  
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -134,24 +159,76 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
+  /* Trading Terminal Components */
+  
+  .trading-card {
+    @apply bg-card text-card-foreground rounded-lg border border-border p-6 shadow-md;
+    border-left: 3px solid transparent;
+    transition: all 150ms ease-out;
+  }
+  
+  .trading-card.active {
+    border-left-color: var(--color-accent-primary);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .trading-card:hover {
+    background-color: rgba(20, 24, 41, 0.95);
+  }
+  
+  .trading-header {
+    @apply flex items-center justify-between mb-4 pb-4 border-b border-border;
+  }
+  
+  .trading-label {
+    @apply text-xs font-semibold uppercase tracking-wider;
+    color: var(--color-text-secondary);
+  }
+  
+  .trading-value {
+    font-family: var(--font-mono-data);
+    @apply text-lg font-semibold;
+    color: var(--color-text-primary);
+  }
+  
+  .trading-value.positive {
+    color: var(--color-accent-success);
+  }
+  
+  .trading-value.negative {
+    color: var(--color-accent-danger);
+  }
+  
+  .trading-value.neutral {
+    color: var(--color-accent-warning);
+  }
+  
+  .status-badge {
+    @apply inline-flex items-center px-2 py-1 rounded text-xs font-semibold uppercase tracking-wider;
+    background-color: rgba(74, 158, 255, 0.1);
+    color: var(--color-accent-primary);
+  }
+  
+  .status-badge.open {
+    background-color: rgba(0, 208, 132, 0.1);
+    color: var(--color-accent-success);
+  }
+  
+  .status-badge.closed {
+    background-color: rgba(255, 71, 87, 0.1);
+    color: var(--color-accent-danger);
+  }
+  
+  .status-badge.warning {
+    background-color: rgba(255, 165, 0, 0.1);
+    color: var(--color-accent-warning);
+  }
+  
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -162,16 +239,16 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
     }
   }
 }
